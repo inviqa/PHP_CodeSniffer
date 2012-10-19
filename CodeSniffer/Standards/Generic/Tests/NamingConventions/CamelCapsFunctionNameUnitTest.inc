@@ -51,6 +51,7 @@ class Magic_Test {
     function __invoke() {}
     function __myFunction() {}
     function __my_function() {}
+    function __call() {}
 }
 
 function __construct() {}
@@ -70,6 +71,7 @@ function __autoload() {}
 function __invoke() {}
 function __myFunction() {}
 function __my_function() {}
+function __call() {}
 
 class Closure_Test {
     function test() {
@@ -86,5 +88,30 @@ class MyClass
 {
     /* @codingStandardsIgnoreEnd */
     public function __construct() {}
+}
+
+trait Foo
+{
+    function __call() {}
+}
+
+class Magic_Case_Test {
+    function __Construct() {}
+    function __isSet() {}
+    function __tostring() {}
+}
+function __autoLoad() {}
+
+class Foo extends \SoapClient
+{
+    public function __soapCall(
+        $functionName,
+        $arguments,
+        $options = array(),
+        $inputHeaders = null,
+        &$outputHeaders = array()
+    ) {
+        // body
+    }
 }
 ?>

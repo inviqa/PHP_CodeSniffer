@@ -190,4 +190,16 @@ class MyClass
     /* @codingStandardsIgnoreEnd */
     public function __construct() {}
 }
+
+trait Foo
+{
+    function __call() {}
+}
+
+class Magic_Case_Test {
+    function __Construct() {}
+    function __isSet() {}
+    function __tostring() {}
+}
+function __autoLoad() {}
 ?>
